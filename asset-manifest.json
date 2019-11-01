@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pocket-studio/static/css/main.ffd6d4c2.chunk.css",
+    "main.css": "/pocket-studio/static/css/main.1147e49e.chunk.css",
     "main.js": "/pocket-studio/static/js/main.ba5ee7ab.chunk.js",
     "main.js.map": "/pocket-studio/static/js/main.ba5ee7ab.chunk.js.map",
     "runtime-main.js": "/pocket-studio/static/js/runtime-main.9bdefb2b.js",
@@ -8,14 +8,14 @@
     "static/js/2.fc45f076.chunk.js": "/pocket-studio/static/js/2.fc45f076.chunk.js",
     "static/js/2.fc45f076.chunk.js.map": "/pocket-studio/static/js/2.fc45f076.chunk.js.map",
     "index.html": "/pocket-studio/index.html",
-    "precache-manifest.61723b4867e30cf1d7372ed44925667a.js": "/pocket-studio/precache-manifest.61723b4867e30cf1d7372ed44925667a.js",
+    "precache-manifest.877b8124b55d0eadbb0d526cdb59eb7b.js": "/pocket-studio/precache-manifest.877b8124b55d0eadbb0d526cdb59eb7b.js",
     "service-worker.js": "/pocket-studio/service-worker.js",
-    "static/css/main.ffd6d4c2.chunk.css.map": "/pocket-studio/static/css/main.ffd6d4c2.chunk.css.map"
+    "static/css/main.1147e49e.chunk.css.map": "/pocket-studio/static/css/main.1147e49e.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.9bdefb2b.js",
     "static/js/2.fc45f076.chunk.js",
-    "static/css/main.ffd6d4c2.chunk.css",
+    "static/css/main.1147e49e.chunk.css",
     "static/js/main.ba5ee7ab.chunk.js"
   ]
 }
