@@ -2,6 +2,7 @@
 
 .container {
   padding: 10px;
+  background: #fff;
 
   @include respond-to('medium'){
     padding: 30px;

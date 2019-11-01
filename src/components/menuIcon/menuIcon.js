@@ -4,7 +4,12 @@ import styles from "./menuIcon.module.scss"
 
 export default ({ handleClick, isMenuOpen }) => {
   return (
-    <button className={styles.button} type="button" onClick={handleClick}>
+    <button
+      alt-text={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+      className={styles.button}
+      type="button"
+      onClick={handleClick}
+    >
       {isMenuOpen ? <MdClose /> : <MdToc />}
     </button>
   )

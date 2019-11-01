@@ -28,14 +28,14 @@ export default ({ isOpen, closeMenu }) => {
       classNames={{ ...styles }}
       unmountOnExit
     >
-      <div ref={container} className={styles.container}>
+      <nav ref={container} className={styles.container}>
         <ul className={styles.ul}>
           <li className={styles.menuItem}>Home</li>
           <li className={styles.menuItem}>Pocket</li>
           <li className={styles.menuItem}>Studio</li>
           <li className={styles.menuItem}>Advanced</li>
         </ul>
-      </div>
+      </nav>
     </CSSTransition>
   )
 }
