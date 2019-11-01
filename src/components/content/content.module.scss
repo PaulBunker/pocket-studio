@@ -1,0 +1,9 @@
+@import "src/helpers/scss/breakpoints.scss";
+
+.container {
+  padding: 10px;
+
+  @include respond-to('medium'){
+    padding: 30px;
+  }
+}

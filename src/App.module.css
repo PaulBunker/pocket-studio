@@ -1,0 +1,22 @@
+.header {
+  background-color: #282c34;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  line-height: 50px;
+  color: white;
+}
+
+.main {
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  width: 100vw;
+  overflow: auto;
+  position: relative;
+  display: flex;
+}

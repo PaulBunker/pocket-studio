@@ -1,0 +1,56 @@
+@import "src/helpers/scss/breakpoints.scss";
+
+.container {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: calc(100vh - 50px);
+
+  @include respond-to('medium'){
+    width: 300px;
+    box-shadow: 0 0 20px #4a4a4a;
+  }
+
+  @include respond-to('large'){
+    position: relative;
+    flex: 0 0 300px;
+    box-shadow: none;
+    border-right: 1px solid #adabab;
+  }
+}
+
+.ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  font-size: 16px;
+  color: #4a4a4a;
+  border-bottom: 1px solid #adabab;
+  padding: 10px 20px;
+
+  &:hover {
+    color: #007aff;
+    cursor: pointer;
+  }
+}
+
+.enter {
+  transform: translateX(-110%);
+}
+
+.enterActive {
+  transform: translateX(0);
+  transition: transform ease-in-out 400ms;
+}
+
+.exit {
+  transform: translateX(0);
+}
+
+.exitActive {
+  transform: translateX(-110%);
+  transition: transform ease-in 300ms;
+}
