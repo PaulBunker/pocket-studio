@@ -2,39 +2,21 @@
 
 .container {
   position: absolute;
+  padding-left: 20px;
   background: #fff;
   width: 100%;
   height: calc(100vh - 50px);
 
   @include respond-to('medium'){
-    width: 300px;
+    width: 380px;
     box-shadow: 0 0 20px #4a4a4a;
   }
 
   @include respond-to('large'){
     position: relative;
-    flex: 0 0 300px;
+    flex: 0 0 380px;
     box-shadow: none;
     border-right: 1px solid #adabab;
-  }
-}
-
-.ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menuItem {
-  font-size: 20px;
-  line-height: 30px;
-  color: #4a4a4a;
-  border-bottom: 1px solid #adabab;
-  padding: 10px 20px;
-
-  &:hover {
-    color: #007aff;
-    cursor: pointer;
   }
 }
 

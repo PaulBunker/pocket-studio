@@ -1,33 +1,37 @@
 [
   {
+    "id": 1,
     "type": "link",
     "text": "About Pocket Studio",
     "target": "about"
   },
   {
+    "id": 2,
     "type":"title",
     "text": "Get started with PocketStudio",
     "menu": [
-      {"type": "link", "title": "Add media", "target":"add-media"},
-      {"type": "link", "title": "Mark clips", "target":"mark-clips"},
-      {"type": "link", "title": "Delete Media", "target":"delete-media"}
+      {"type": "link", "text": "Add media", "target":"add-media"},
+      {"type": "link", "text": "Mark clips", "target":"mark-clips"},
+      {"type": "link", "text": "Delete Media", "target":"delete-media"}
     ]
   },
   {
+    "id": 3,
     "type":"title",
     "text": "Create awesome thing",
     "menu": [
-      {"type": "link", "title": "Do the thing", "target":"do-the-thing"},
-      {"type": "link", "title": "Make it sing", "target":"make-it-sing"},
-      {"type": "link", "title": "Get rid of it", "target":"get-rid-of-it"}
+      {"type": "link", "text": "Do the thing", "target":"do-the-thing"},
+      {"type": "link", "text": "Make it sing", "target":"make-it-sing"},
+      {"type": "link", "text": "Get rid of it", "target":"get-rid-of-it"}
     ]
   },
   {
+    "id": 4,
     "type":"title",
     "text": "Work smarter",
     "menu": [
-      {"type": "link", "title": "Reuse assets", "target":"reuse-assets"},
-      {"type": "link", "title": "Automate everything", "target":"automate-everything"}
+      {"type": "link", "text": "Reuse assets", "target":"reuse-assets"},
+      {"type": "link", "text": "Automate everything", "target":"automate-everything"}
     ]
   }
 ]

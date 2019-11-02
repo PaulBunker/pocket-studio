@@ -6,6 +6,15 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  /* 
+    TODO: this is bad practice but I didn't have time for an elegant solution 
+    https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
+    remove this block to see that keyboard tabbing works but looks a little ugly.
+  */
+  outline: none;
+}
+
 body {
   background: #ccc;
   margin: 0;

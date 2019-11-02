@@ -1,17 +1,26 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from "react"
 import PropTypes from "prop-types"
+import { MdKeyboardArrowRight } from "react-icons/md"
+import classnames from "classnames"
 import MenuLink from "../menuLink/menuLink"
+import styles from "./subMenu.module.scss"
 
 const SubMenu = ({ text, menu }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   return (
-    <div>
-      <button onClick={toggle} type="button">
+    <>
+      <button className={styles.link} onClick={toggle} type="button">
+        <MdKeyboardArrowRight
+          className={classnames(styles.icon, { [styles.active]: isOpen })}
+        />
         {text}
       </button>
-      {isOpen && menu.map(link => <MenuLink key={link.target} />)}
-    </div>
+      <div className={styles.linkContainer}>
+        {isOpen && menu.map(link => <MenuLink key={link.target} {...link} />)}
+      </div>
+    </>
   )
 }
 
@@ -20,7 +29,7 @@ SubMenu.propTypes = {
   menu: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
       target: PropTypes.string.isRequired
     })
   ).isRequired

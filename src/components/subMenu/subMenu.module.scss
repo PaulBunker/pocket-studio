@@ -1,0 +1,21 @@
+@import "../../helpers/scss/sharedMenuLink.scss";
+
+.linkContainer {
+  padding-left: 20px;
+}
+
+.icon {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  vertical-align: middle;
+  transition: transform ease-in 200ms;
+
+  &:hover {
+    color: #007aff;
+  }
+
+  &.active {
+    transform: rotate(90deg);
+  }
+}

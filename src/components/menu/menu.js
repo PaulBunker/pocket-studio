@@ -1,6 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useRef, useEffect } from "react"
 import { CSSTransition } from "react-transition-group"
 import styles from "./menu.module.scss"
+import MenuLink from "../menuLink/menuLink"
+import SubMenu from "../subMenu/subMenu"
+import toc from "../../helpers/data/toc.json"
 
 export default ({ isOpen, closeMenu }) => {
   const container = useRef()
@@ -29,12 +33,13 @@ export default ({ isOpen, closeMenu }) => {
       unmountOnExit
     >
       <nav ref={container} className={styles.container}>
-        <ul className={styles.ul}>
-          <li className={styles.menuItem}>Home</li>
-          <li className={styles.menuItem}>Pocket</li>
-          <li className={styles.menuItem}>Studio</li>
-          <li className={styles.menuItem}>Advanced</li>
-        </ul>
+        {toc.map(item =>
+          item.type === "link" ? (
+            <MenuLink key={item.id} {...item} />
+          ) : (
+            <SubMenu key={item.id} {...item} />
+          )
+        )}
       </nav>
     </CSSTransition>
   )

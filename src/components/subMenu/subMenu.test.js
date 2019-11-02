@@ -7,19 +7,17 @@ import MenuLink from "../menuLink/menuLink"
 const testData = {
   text: "Get started with PocketStudio",
   menu: [
-    { type: "link", title: "Add media", target: "add-media" },
-    { type: "link", title: "Mark clips", target: "mark-clips" },
-    { type: "link", title: "Delete Media", target: "delete-media" }
+    { type: "link", text: "Add media", target: "add-media" },
+    { type: "link", text: "Mark clips", target: "mark-clips" },
+    { type: "link", text: "Delete Media", target: "delete-media" }
   ]
 }
 
 describe("Testing SubMenu component", () => {
   it("renders title text", () => {
     const { root } = create(<SubMenu {...testData} />)
-    root.find(
-      el =>
-        el.type === "button" && el.children && el.children[0] === testData.text
-    )
+    const button = root.findByType("button")
+    expect(button.children[1]).toBe(testData.text)
   })
 
   it("does not render the sub links", () => {
