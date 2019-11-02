@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#PocketStudio Code Challenge
+
+## Prerequisites
+
+### Node.js
+Visit the Node.js site and follow the instructions to download and install the recommended version for your operating system. Once you have followed the installation steps, make sure everything was installed properly: This project specifies node version `^11.10` `nvm` is a use full tool for managing different versions of node across projects https://github.com/nvm-sh/nvm 
+
+### Yarn 
+https://yarnpkg.com/en/docs/install
+
+run `yarn` in the project folder after cloning and choose from one of the commands below. 
 
 ## Available Scripts
 
