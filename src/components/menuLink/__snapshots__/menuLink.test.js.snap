@@ -2,7 +2,7 @@
 
 exports[`Testing the MenuLink component renders a link 1`] = `
 <a
-  activeClassName="active"
+  activeclassname="active"
   className="link"
   href="/target"
   onClick={[Function]}
