@@ -20,7 +20,7 @@ const SubMenu = ({ text, menu }) => {
       </button>
       <CSSTransition
         in={isOpen}
-        timeout={200}
+        timeout={1000}
         classNames={{ ...styles }}
         unmountOnExit
       >
