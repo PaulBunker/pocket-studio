@@ -28,7 +28,7 @@ export default ({ isOpen, closeMenu }) => {
   return (
     <CSSTransition
       in={isOpen}
-      timeout={200}
+      timeout={100}
       classNames={{ ...styles }}
       unmountOnExit
     >

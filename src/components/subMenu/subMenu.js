@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { MdKeyboardArrowRight } from "react-icons/md"
 import classnames from "classnames"
+import { CSSTransition } from "react-transition-group"
 import MenuLink from "../menuLink/menuLink"
 import styles from "./subMenu.module.scss"
 
@@ -17,9 +18,18 @@ const SubMenu = ({ text, menu }) => {
         />
         {text}
       </button>
-      <div className={styles.linkContainer}>
-        {isOpen && menu.map(link => <MenuLink key={link.target} {...link} />)}
-      </div>
+      <CSSTransition
+        in={isOpen}
+        timeout={200}
+        classNames={{ ...styles }}
+        unmountOnExit
+      >
+        <div className={styles.linkContainer}>
+          {menu.map(link => (
+            <MenuLink key={link.target} {...link} />
+          ))}
+        </div>
+      </CSSTransition>
     </>
   )
 }

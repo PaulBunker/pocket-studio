@@ -3,6 +3,8 @@
 .container {
   padding: 10px;
   background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
 
   @include respond-to('medium'){
     padding: 30px;
