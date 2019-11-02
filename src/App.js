@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { BrowserRouter as Router } from "react-router-dom"
 import Menu from "./components/menu/menu"
 import Content from "./components/content/content"
 import MenuIcon from "./components/menuIcon/menuIcon"
@@ -27,22 +28,24 @@ export default () => {
   }
 
   return (
-    <div className={styles.App}>
-      <header className={styles.header}>
-        {!isLargeScreen && (
-          <MenuIcon
-            handleClick={() => {
-              setIsMenuOpen(!isMenuOpen)
-            }}
-            isMenuOpen={isMenuOpen}
-          />
-        )}
-        PocketStudio
-      </header>
-      <main className={styles.main}>
-        <Menu closeMenu={closeMenu} isOpen={isMenuOpen} />
-        <Content />
-      </main>
-    </div>
+    <Router>
+      <div className={styles.App}>
+        <header className={styles.header}>
+          {!isLargeScreen && (
+            <MenuIcon
+              handleClick={() => {
+                setIsMenuOpen(!isMenuOpen)
+              }}
+              isMenuOpen={isMenuOpen}
+            />
+          )}
+          PocketStudio
+        </header>
+        <main className={styles.main}>
+          <Menu closeMenu={closeMenu} isOpen={isMenuOpen} />
+          <Content />
+        </main>
+      </div>
+    </Router>
   )
 }
