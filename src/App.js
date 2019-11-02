@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { HashRouter as Router, Route } from "react-router-dom"
+import { HashRouter as Router, Route, Link } from "react-router-dom"
 import Menu from "./components/menu/menu"
 import Content from "./components/content/content"
 import MenuIcon from "./components/menuIcon/menuIcon"
@@ -39,7 +39,9 @@ export default () => {
               isMenuOpen={isMenuOpen}
             />
           )}
-          PocketStudio
+          <Link to="/" className={styles.title}>
+            PocketStudio
+          </Link>
         </header>
         <main className={styles.main}>
           <Menu closeMenu={closeMenu} isOpen={isMenuOpen} />
