@@ -6,6 +6,7 @@
   background: #fff;
   width: 100%;
   height: calc(100vh - 50px);
+  overflow-y: scroll;
 
   @include respond-to('medium'){
     width: 380px;
