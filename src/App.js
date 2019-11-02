@@ -21,7 +21,7 @@ export default () => {
     }
     mql.addListener(handler)
     return () => mql.removeListener(handler)
-  })
+  }, [isLargeScreen, mql])
 
   const closeMenu = () => {
     if (!isLargeScreen) setIsMenuOpen(false)
@@ -46,12 +46,12 @@ export default () => {
         <main className={styles.main}>
           <Menu closeMenu={closeMenu} isOpen={isMenuOpen} />
           <Route exact path="/">
-            <Content />
+            <Content closeMenu={closeMenu} />
           </Route>
           <Route
             path="/:page"
             render={({ match }) => {
-              return <Content page={match.url} />
+              return <Content closeMenu={closeMenu} page={match.url} />
             }}
           />
         </main>

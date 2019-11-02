@@ -17,7 +17,7 @@ describe("testing content component", () => {
     })
 
     expect(global.fetch).toHaveBeenCalledTimes(1)
-    expect(global.fetch).toHaveBeenCalledWith("/pages/home.md")
+    expect(global.fetch).toHaveBeenCalledWith("./pages/home.md")
     const h1 = instance.root.findByType("h1")
     expect(h1.children[0].props.value).toBe("return text")
     global.fetch.mockClear()

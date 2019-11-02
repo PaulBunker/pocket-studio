@@ -9,21 +9,21 @@ import toc from "../../helpers/data/toc.json"
 export default ({ isOpen, closeMenu }) => {
   const container = useRef()
 
-  const handleClick = e => {
-    if (container.current.contains(e.target)) {
-      return
-    }
-    closeMenu()
-  }
-
   useEffect(() => {
+    const handleClick = e => {
+      if (container.current.contains(e.target)) {
+        return
+      }
+      closeMenu()
+    }
+
     if (isOpen) {
       document.addEventListener("mousedown", handleClick)
     }
     return () => {
       document.removeEventListener("mousedown", handleClick)
     }
-  })
+  }, [closeMenu, isOpen])
 
   return (
     <CSSTransition
