@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import Markdown from "react-markdown"
+import styles from "./content.module.scss"
 
 const Content = () => {
   const [error, setErrors] = useState(false)
@@ -20,9 +22,9 @@ const Content = () => {
   }, [])
 
   return (
-    <div>
+    <div className={styles.container}>
       {error && <p>{error}</p>}
-      {data && <p>{data}</p>}
+      {data && <Markdown escapeHtml source={data} />}
     </div>
   )
 }
