@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pocket-studio/static/css/main.34a8764a.chunk.css",
-    "main.js": "/pocket-studio/static/js/main.216da876.chunk.js",
-    "main.js.map": "/pocket-studio/static/js/main.216da876.chunk.js.map",
+    "main.js": "/pocket-studio/static/js/main.5115bd85.chunk.js",
+    "main.js.map": "/pocket-studio/static/js/main.5115bd85.chunk.js.map",
     "runtime-main.js": "/pocket-studio/static/js/runtime-main.9bdefb2b.js",
     "runtime-main.js.map": "/pocket-studio/static/js/runtime-main.9bdefb2b.js.map",
     "static/js/2.fcdfe5a8.chunk.js": "/pocket-studio/static/js/2.fcdfe5a8.chunk.js",
     "static/js/2.fcdfe5a8.chunk.js.map": "/pocket-studio/static/js/2.fcdfe5a8.chunk.js.map",
     "index.html": "/pocket-studio/index.html",
-    "precache-manifest.d98b7d16478dcc5392d2a3e5223b24b8.js": "/pocket-studio/precache-manifest.d98b7d16478dcc5392d2a3e5223b24b8.js",
+    "precache-manifest.acacbdab946f8e400359e32cdbce3514.js": "/pocket-studio/precache-manifest.acacbdab946f8e400359e32cdbce3514.js",
     "service-worker.js": "/pocket-studio/service-worker.js",
     "static/css/main.34a8764a.chunk.css.map": "/pocket-studio/static/css/main.34a8764a.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.9bdefb2b.js",
     "static/js/2.fcdfe5a8.chunk.js",
     "static/css/main.34a8764a.chunk.css",
-    "static/js/main.216da876.chunk.js"
+    "static/js/main.5115bd85.chunk.js"
   ]
 }
