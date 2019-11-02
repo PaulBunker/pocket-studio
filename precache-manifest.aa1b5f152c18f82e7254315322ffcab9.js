@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb3b1152330eb6526b14cbb8da5815ea",
+    "revision": "9ff891a2fb1edd23f1a3f75f20a6f905",
     "url": "/pocket-studio/index.html"
   },
   {
-    "revision": "523e2584074bba3b9286",
+    "revision": "9105867db6181ecca038",
     "url": "/pocket-studio/static/css/main.34a8764a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pocket-studio/static/js/2.fcdfe5a8.chunk.js"
   },
   {
-    "revision": "523e2584074bba3b9286",
-    "url": "/pocket-studio/static/js/main.5b724331.chunk.js"
+    "revision": "9105867db6181ecca038",
+    "url": "/pocket-studio/static/js/main.7468dab1.chunk.js"
   },
   {
     "revision": "b33e7bacc0fbc69c1f21",
