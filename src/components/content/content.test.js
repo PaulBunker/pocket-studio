@@ -4,7 +4,7 @@ import Content from "./content"
 
 describe("testing content component", () => {
   it("fetches the data and processes the markdown", async done => {
-    const mockSuccessResponse = "#return text"
+    const mockSuccessResponse = "# return text"
     const mockJsonPromise = Promise.resolve(mockSuccessResponse)
     const mockFetchPromise = Promise.resolve({
       text: () => mockJsonPromise
@@ -13,12 +13,13 @@ describe("testing content component", () => {
 
     let instance
     await act(async () => {
-      instance = create(<Content />)
+      instance = create(<Content page="home" />)
     })
 
     expect(global.fetch).toHaveBeenCalledTimes(1)
     expect(global.fetch).toHaveBeenCalledWith("/pages/home.md")
-    // const h1 = instance.root.findByType("h1")
+    const h1 = instance.root.findByType("h1")
+    expect(h1.children[0].props.value).toBe("return text")
     global.fetch.mockClear()
     done()
   })

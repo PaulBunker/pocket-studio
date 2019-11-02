@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { BrowserRouter as Router } from "react-router-dom"
+import { HashRouter as Router, Route } from "react-router-dom"
 import Menu from "./components/menu/menu"
 import Content from "./components/content/content"
 import MenuIcon from "./components/menuIcon/menuIcon"
@@ -43,7 +43,15 @@ export default () => {
         </header>
         <main className={styles.main}>
           <Menu closeMenu={closeMenu} isOpen={isMenuOpen} />
-          <Content />
+          <Route exact path="/">
+            <Content />
+          </Route>
+          <Route
+            path="/:page"
+            render={({ match }) => {
+              return <Content page={match.url} />
+            }}
+          />
         </main>
       </div>
     </Router>
