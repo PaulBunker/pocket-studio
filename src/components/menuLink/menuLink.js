@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
-import styles from "./menuLink.module.scss";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import styles from './menuLink.module.scss'
 
 const MenuLink = ({ text, target, closeMenu, currentPage }) => (
   <NavLink
@@ -13,13 +13,13 @@ const MenuLink = ({ text, target, closeMenu, currentPage }) => (
   >
     {text}
   </NavLink>
-);
+)
 
 MenuLink.propTypes = {
   text: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,
   closeMenu: PropTypes.func.isRequired,
-  currentPage: PropTypes.string.isRequired
-};
+  currentPage: PropTypes.string.isRequired,
+}
 
-export default MenuLink;
+export default MenuLink

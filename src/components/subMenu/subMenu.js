@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { MdKeyboardArrowRight } from "react-icons/md"
-import classnames from "classnames"
-import { CSSTransition } from "react-transition-group"
-import MenuLink from "../menuLink/menuLink"
-import styles from "./subMenu.module.scss"
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { MdKeyboardArrowRight } from 'react-icons/md'
+import classnames from 'classnames'
+import { CSSTransition } from 'react-transition-group'
+import MenuLink from '../menuLink/menuLink'
+import styles from './subMenu.module.scss'
 
 const SubMenu = ({ text, menu, closeMenu, currentPage }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -47,9 +47,9 @@ SubMenu.propTypes = {
     PropTypes.shape({
       type: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
-      target: PropTypes.string.isRequired
+      target: PropTypes.string.isRequired,
     })
-  ).isRequired
+  ).isRequired,
 }
 
 export default SubMenu

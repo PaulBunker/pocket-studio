@@ -1,30 +1,30 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useRef, useEffect } from "react";
-import { CSSTransition } from "react-transition-group";
-import PropTypes from "prop-types";
-import styles from "./menu.module.scss";
-import MenuLink from "../menuLink/menuLink";
-import SubMenu from "../subMenu/subMenu";
-import toc from "../../helpers/data/toc.json";
+import React, { useRef, useEffect } from 'react'
+import { CSSTransition } from 'react-transition-group'
+import PropTypes from 'prop-types'
+import styles from './menu.module.scss'
+import MenuLink from '../menuLink/menuLink'
+import SubMenu from '../subMenu/subMenu'
+import toc from '../../helpers/data/toc.json'
 
 const Menu = ({ isOpen, closeMenu, currentPage }) => {
-  const container = useRef();
+  const container = useRef()
 
   useEffect(() => {
     const handleClick = e => {
       if (container.current.contains(e.target)) {
-        return;
+        return
       }
-      closeMenu();
-    };
+      closeMenu()
+    }
 
     if (isOpen) {
-      document.addEventListener("mousedown", handleClick);
+      document.addEventListener('mousedown', handleClick)
     }
     return () => {
-      document.removeEventListener("mousedown", handleClick);
-    };
-  }, [closeMenu, isOpen]);
+      document.removeEventListener('mousedown', handleClick)
+    }
+  }, [closeMenu, isOpen])
 
   return (
     <CSSTransition
@@ -35,7 +35,7 @@ const Menu = ({ isOpen, closeMenu, currentPage }) => {
     >
       <nav ref={container} className={styles.container}>
         {toc.map(item =>
-          item.type === "link" ? (
+          item.type === 'link' ? (
             <MenuLink
               key={item.id}
               {...item}
@@ -53,13 +53,13 @@ const Menu = ({ isOpen, closeMenu, currentPage }) => {
         )}
       </nav>
     </CSSTransition>
-  );
-};
+  )
+}
 
 Menu.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   closeMenu: PropTypes.func.isRequired,
-  currentPage: PropTypes.string.isRequired
-};
+  currentPage: PropTypes.string.isRequired,
+}
 
-export default Menu;
+export default Menu

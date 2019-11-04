@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react"
-import { HashRouter as Router, Route, Link } from "react-router-dom"
-import { debounce } from "lodash"
-import Menu from "./components/menu/menu"
-import Content from "./components/content/content"
-import MenuIcon from "./components/menuIcon/menuIcon"
-import styles from "./App.module.css"
+import React, { useState, useEffect } from 'react'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { debounce } from 'lodash'
+import Menu from './components/menu/menu'
+import Content from './components/content/content'
+import MenuIcon from './components/menuIcon/menuIcon'
+import styles from './App.module.css'
 
-export const DESKTOP_WIDE_BREAKPOINT = "1000px"
+export const DESKTOP_WIDE_BREAKPOINT = '1000px'
 
 export default () => {
   const mql = window.matchMedia(`(min-width: ${DESKTOP_WIDE_BREAKPOINT})`)
   const [isLargeScreen, setIsLargeScreen] = useState(mql.matches)
   const [isMenuOpen, setIsMenuOpen] = useState(isLargeScreen)
-  const [currentPage, setCurrentPage] = useState("")
+  const [currentPage, setCurrentPage] = useState('')
 
   useEffect(() => {
     const handler = debounce(() => {
