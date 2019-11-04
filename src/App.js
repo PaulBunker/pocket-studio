@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { HashRouter as Router, Route, Link } from "react-router-dom"
+import { debounce } from "lodash"
 import Menu from "./components/menu/menu"
 import Content from "./components/content/content"
 import MenuIcon from "./components/menuIcon/menuIcon"
@@ -14,12 +15,12 @@ export default () => {
   const [currentPage, setCurrentPage] = useState("")
 
   useEffect(() => {
-    const handler = () => {
+    const handler = debounce(() => {
       if (isLargeScreen !== mql.matches) {
         setIsLargeScreen(mql.matches)
         setIsMenuOpen(mql.matches)
       }
-    }
+    }, 100)
     mql.addListener(handler)
     return () => mql.removeListener(handler)
   }, [isLargeScreen, mql])
@@ -56,7 +57,6 @@ export default () => {
           <Route
             path="/:page"
             render={({ match }) => {
-              console.log(match)
               setCurrentPage(match.url)
               return <Content closeMenu={closeMenu} page={match.url} />
             }}
