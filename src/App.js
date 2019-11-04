@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, NavLink } from 'react-router-dom'
 import { debounce } from 'lodash'
 import Menu from './components/menu/menu'
 import Content from './components/content/content'
@@ -41,9 +41,16 @@ export default () => {
               isMenuOpen={isMenuOpen}
             />
           )}
-          <Link to="/" className={styles.title}>
+          <NavLink
+            to="/"
+            className={styles.title}
+            onClick={() => {
+              setCurrentPage('')
+              closeMenu()
+            }}
+          >
             PocketStudio
-          </Link>
+          </NavLink>
         </header>
         <main className={styles.main}>
           <Menu
