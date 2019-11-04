@@ -24,8 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.js",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -m ‘auto commit [ci skip]’ -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
