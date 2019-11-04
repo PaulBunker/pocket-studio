@@ -29,8 +29,10 @@ const Content = ({ page = "home" }) => {
 
   return (
     <div className={styles.container}>
-      {error && <p>{error}</p>}
-      {data && <Markdown escapeHtml source={data} />}
+      <div className={styles.inner}>
+        {error && <p>{error}</p>}
+        {data && <Markdown escapeHtml source={data} />}
+      </div>
     </div>
   )
 }

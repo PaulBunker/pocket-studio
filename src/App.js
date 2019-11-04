@@ -20,7 +20,7 @@ export default () => {
         setIsLargeScreen(mql.matches)
         setIsMenuOpen(mql.matches)
       }
-    }, 100)
+    }, 180)
     mql.addListener(handler)
     return () => mql.removeListener(handler)
   }, [isLargeScreen, mql])

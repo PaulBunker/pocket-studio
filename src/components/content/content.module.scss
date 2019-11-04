@@ -1,12 +1,16 @@
 @import "src/helpers/scss/breakpoints.scss";
 
-.container {
-  padding: 10px;
+.container { 
   background: #fff;
+  width: 100%;
+  overflow-y: auto; 
+}
+
+.inner {
+  padding: 10px;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  overflow-y: auto;
 
   @include respond-to('medium'){
     padding: 30px;
