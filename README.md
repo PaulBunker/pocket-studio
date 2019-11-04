@@ -1,5 +1,7 @@
 # PocketStudio Code Challenge
 
+[![CircleCI](https://circleci.com/gh/PaulBunker/pocket-studio/tree/master.svg?style=svg)](https://circleci.com/gh/PaulBunker/pocket-studio/tree/master)
+
 https://paulbunker.github.io/pocket-studio/
 
 ## Prerequisites
