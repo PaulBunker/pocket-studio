@@ -19,6 +19,8 @@ https://yarnpkg.com/en/docs/install
 
 _windows users_ https://yarnpkg.com/latest.msi
 
+## Installation
+
 run `yarn` in the project folder to install project dependencies
 
 ## development
