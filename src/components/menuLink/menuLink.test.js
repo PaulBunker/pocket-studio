@@ -4,6 +4,8 @@ import { create } from "react-test-renderer"
 import { BrowserRouter as Router } from "react-router-dom"
 import MenuLink from "./menuLink"
 
+const closeMenu = jest.fn()
+
 const props = {
   text: "link text",
   target: "target",
@@ -14,7 +16,7 @@ describe.only("Testing the MenuLink component", () => {
   it("renders a link", () => {
     const link = create(
       <Router>
-        <MenuLink {...props} />
+        <MenuLink {...props} closeMenu={closeMenu} />
       </Router>
     )
     expect(link).toMatchSnapshot()

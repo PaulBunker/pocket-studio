@@ -7,7 +7,7 @@ import { CSSTransition } from "react-transition-group"
 import MenuLink from "../menuLink/menuLink"
 import styles from "./subMenu.module.scss"
 
-const SubMenu = ({ text, menu }) => {
+const SubMenu = ({ text, menu, closeMenu, currentPage }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   return (
@@ -26,7 +26,12 @@ const SubMenu = ({ text, menu }) => {
       >
         <div className={styles.linkContainer}>
           {menu.map(link => (
-            <MenuLink key={link.target} {...link} />
+            <MenuLink
+              key={link.target}
+              {...link}
+              closeMenu={closeMenu}
+              currentPage={currentPage}
+            />
           ))}
         </div>
       </CSSTransition>
@@ -35,7 +40,9 @@ const SubMenu = ({ text, menu }) => {
 }
 
 SubMenu.propTypes = {
+  currentPage: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  closeMenu: PropTypes.func.isRequired,
   menu: PropTypes.arrayOf(
     PropTypes.shape({
       type: PropTypes.string.isRequired,

@@ -6,7 +6,8 @@
   background: #fff;
   width: 100%;
   height: calc(100vh - 50px);
-  overflow-y: scroll;
+  overflow-y: auto;
+  will-change: transform;
 
   @include respond-to('medium'){
     width: 380px;
@@ -22,19 +23,19 @@
 }
 
 .enter {
-  transform: translateX(-110%);
+  transform: translate3D(-110%, 0, 0);
 }
 
 .enterActive {
-  transform: translateX(0);
-  transition: transform ease-in-out 300ms;
+  transform: translate3D(0, 0, 0);
+  transition: transform ease-out 300ms;
 }
 
 .exit {
-  transform: translateX(0);
+  transform: translate3D(0, 0, 0);
 }
 
 .exitActive {
-  transform: translateX(-110%);
+  transform: translate3D(-110%, 0, 0);
   transition: transform ease-in 300ms;
 }

@@ -2,7 +2,7 @@
 
 exports[`Testing the MenuLink component renders a link 1`] = `
 <a
-  activeclassname="active"
+  aria-current={null}
   className="link"
   href="/target"
   onClick={[Function]}

@@ -11,6 +11,7 @@ export default () => {
   const mql = window.matchMedia(`(min-width: ${DESKTOP_WIDE_BREAKPOINT})`)
   const [isLargeScreen, setIsLargeScreen] = useState(mql.matches)
   const [isMenuOpen, setIsMenuOpen] = useState(isLargeScreen)
+  const [currentPage, setCurrentPage] = useState("")
 
   useEffect(() => {
     const handler = () => {
@@ -44,13 +45,19 @@ export default () => {
           </Link>
         </header>
         <main className={styles.main}>
-          <Menu closeMenu={closeMenu} isOpen={isMenuOpen} />
+          <Menu
+            closeMenu={closeMenu}
+            isOpen={isMenuOpen}
+            currentPage={currentPage}
+          />
           <Route exact path="/">
             <Content closeMenu={closeMenu} />
           </Route>
           <Route
             path="/:page"
             render={({ match }) => {
+              console.log(match)
+              setCurrentPage(match.url)
               return <Content closeMenu={closeMenu} page={match.url} />
             }}
           />

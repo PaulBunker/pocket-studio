@@ -6,7 +6,7 @@ import MenuLink from "../menuLink/menuLink"
 import SubMenu from "../subMenu/subMenu"
 import toc from "../../helpers/data/toc.json"
 
-export default ({ isOpen, closeMenu }) => {
+export default ({ isOpen, closeMenu, currentPage }) => {
   const container = useRef()
 
   useEffect(() => {
@@ -35,9 +35,19 @@ export default ({ isOpen, closeMenu }) => {
       <nav ref={container} className={styles.container}>
         {toc.map(item =>
           item.type === "link" ? (
-            <MenuLink key={item.id} {...item} />
+            <MenuLink
+              key={item.id}
+              {...item}
+              closeMenu={closeMenu}
+              currentPage={currentPage}
+            />
           ) : (
-            <SubMenu key={item.id} {...item} />
+            <SubMenu
+              key={item.id}
+              {...item}
+              closeMenu={closeMenu}
+              currentPage={currentPage}
+            />
           )
         )}
       </nav>
