@@ -13,6 +13,7 @@ This project specifies node version `^11.10.1` **nvm** is a useful tool for mana
 _windows users_ https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip
 
 `nvm install 11.10.1`
+
 `nvm use 11.10.1`
 
 ### Yarn
